@@ -74,7 +74,7 @@ def main():
     st.write("**1. Image Upload:** Upload an image in JPG, PNG, or TIFF format.")
     st.write("**2. Adjust Parameters:** Users can fine-tune two key parameters:")
     
-    st.subheader("Intensity Percentile (intensity_percentile)")
+    st.subheader("Intensity Percentile")
     st.write("**Definition:** This parameter determines the intensity threshold used for segmentation. Pixels with intensity values above this percentile are considered as part of the follicle, while others are ignored.")
     st.write("**How it works:**")
     st.write("- The grayscale image is normalized to ensure intensity values range between 0 and 255.")
@@ -84,7 +84,7 @@ def main():
     st.write("- Lower values (e.g., 90%): More pixels are included in the follicle mask, potentially leading to more noise.")
     st.write("- Higher values (e.g., 99%): Only the brightest regions are included, making the segmentation more selective but possibly missing follicle details.")
     
-    st.subheader("Size Threshold Fraction (size_threshold_fraction)")
+    st.subheader("Size Threshold Fraction")
     st.write("**Definition:** This parameter is used to filter out small objects (e.g., artifacts or dye spots) by comparing their sizes to the largest detected follicle.")
     st.write("**How it works:**")
     st.write("- The largest connected component in the binary mask is identified as the follicle.")
