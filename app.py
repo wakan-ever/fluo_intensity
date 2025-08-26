@@ -47,7 +47,7 @@ def main():
     st.write("Upload an image, adjust parameters, and visualize the follicle segmentation.")
     
     uploaded_file = st.file_uploader("Upload Image", type=["jpg", "jpeg", "png", "tif", "tiff"])
-    intensity_percentile = st.slider("Intensity Percentile", 90.0, 99.9, 96.3, 0.1)
+    intensity_percentile = st.slider("Intensity Percentile", 80.0, 99.9, 96.3, 0.1)
     size_threshold_fraction = st.slider("Size Threshold Fraction", 0.0, 1.0, 0.25, 0.05)
     
     if uploaded_file is not None:
